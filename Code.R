@@ -24,6 +24,18 @@ ex1 <- `policja-alko-bezpraw` |>
 # documentation for main funciton
 ?estimatePopsize
 
+# code for loading final models without the need for running the code:
+# for ex1
+load("EsraModel1_bootstrap.Rdata")
+
+plot(modelZtoiGeom, "rootogram")
+# for ex2
+load("EsraModel2_bootstrap.RData")
+plot(modelZtoiGeom, "rootogram")
+
+load("EsraModel2_bootstrap_worse.RData")
+plot(modelOiztGeom, "rootogram")
+
 # ex1 ####
 model1 <- estimatePopsize(
   formula = counts ~ wiek_cut + plec,
