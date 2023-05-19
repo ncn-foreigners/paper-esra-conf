@@ -2,7 +2,7 @@
 ### "`singleRcapture`: an R package for estimation of population size using single-source capture-recapture models"
 
 Raw data file with .rds extension as well as fitted final models use in the
-publication are in the data folder.
+publication are in the [data](https://github.com/ncn-foreigners/paper-esra-conf/tree/main/data) folder.
 
 The code used to obtain results (model selection data cleaning regression 
 fitting) is in Code.R file and requires [`singleRcapture`](https://ncn-foreigners.github.io/singleRcapture/) 
@@ -13,4 +13,4 @@ The computations were done using R version: `4.1.2`.
 
 Rootogram included in the paper is in [Rootogram_esra_2.pdf](https://github.com/ncn-foreigners/paper-esra-conf/blob/main/Rootogram_esra_2.pdf) file
 
-The paper itself is in Paper.pdf file.
+The paper itself is in [Paper.pdf](https://github.com/ncn-foreigners/paper-esra-conf/blob/main/Paper.pdf) file.
