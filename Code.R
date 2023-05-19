@@ -11,11 +11,11 @@ police_drunk_or_no_licence <- readRDS("data/policja-alko-bezpraw.rds")
 df_no_licence <- police_drunk_or_no_licence |> 
   filter(rok_wpis == 2021) |>
   filter(kwalifikacja == "Art. 180a") |>
-  count(id, gender, age=2021-rok_ur, dzien) |>
-  count(id, gender, age, sort = T, name = "counts") |>
+  count(id, plec, age=2021-rok_ur, dzien) |>
+  count(id, plec, age, sort = T, name = "counts") |>
   filter(age >= 18) |>
   mutate(age_cut = cut(age, c(18, 30, 40, 50, 60, Inf), include.lowest = T, right = T)) |>
-  rename(c(gender = "gender"))
+  rename(c(gender = "plec"))
 
 # Under the influence
 df_drunk <- police_drunk_or_no_licence |> 
@@ -25,7 +25,7 @@ df_drunk <- police_drunk_or_no_licence |>
   count(id, gender, age, sort = T, name = "counts") |>
   filter(age >= 18) |>
   mutate(age_cut = cut(age, c(18, 30, 40, 50, 60, Inf), include.lowest = T, right = T)) |>
-  rename(c(gender = "gender"))
+  rename(c(gender = "plec"))
 
 # documentation for main funciton
 ?estimatePopsize
